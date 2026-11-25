@@ -2,6 +2,9 @@ from art import logo
 import random
 import subprocess
 
+EASY_ATTEMPTS = 10
+HARD_ATTEMPTS = 5
+
 def game(attempts):
     number = random.randint(1, 100)
     while attempts > 0:
@@ -27,8 +30,8 @@ while playing:
 
     difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
     if(difficulty == "easy"):
-        game(attempts=10)
+        game(attempts=EASY_ATTEMPTS)
     elif(difficulty == "hard"):
-        game(attempts=5)
+        game(attempts=HARD_ATTEMPTS)
 
     playing = input("Wan't play again? Type 'y' or 'n'") == "y"
